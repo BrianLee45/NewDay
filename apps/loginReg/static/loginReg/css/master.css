@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #808080;
+}
+
+main {
+  margin: 25px auto;
+  width: 450px;
+  background-color: #ff9f71;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+h1 {
+  height: 40px;
+  margin: 10px 40px;
+}
+
+.loginSection {
+  margin: 10px 40px;
+}
+
+p.flash {
+  background-color: yellow;
+  padding: 0px 20px;
+}
+
+.display {
+  border: 1px solid black;
+}
+
+table {
+  border-top: 15px;
+}
+
+button {
+  width: 50px;
+}
+
+/*label {
+  display: block;
+}*/

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Registration Page</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'loginReg/css/master.css' %}">
+  <!-- <link rel="stylesheet" href="../static/css/master.css"> -->
+</head>
+<body>
+  <main>
+    <h1>Registration</h1>
+    {% if messages %}
+      {% for message in messages %}
+        <p class="flash">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+    <table>
+      <tbody>
+          <form action="{% url 'registerMe' %}" method="POST">
+            {% csrf_token %}
+            <tr>
+              <td>First name:</td><td class="display"><input type="text" name="firstname" placeholder="First name"></td>
+            </tr>
+            <tr>
+              <td>Last name:</td><td class="display"><input type="text" name="lastname" placeholder="Last name"></td>
+            </tr>
+            <tr>
+              <td>Email:</td><td class="display"><input type="text" name="email" placeholder="email@email.com"></td>
+            </tr>
+            <!-- <tr>
+              <td>Occupation:</td><td class="display"><input type="text" name="occupation" placeholder="Occupation"></td>
+            </tr> -->
+            <tr>
+              <td>Password:</td><td class="display"><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+            <tr>
+              <td>Confirm password:</td><td class="display"><input type="password" name="confirmPass" placeholder="Repeat password"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button type="submit" name="updateMe">Update</button>
+              </td>
+            </tr>
+            </form>
+        </tbody>
+      </table>
+    </main>
+  </body>
+  </html>
