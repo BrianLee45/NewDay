@@ -23,7 +23,7 @@ def showPopular(request):
         "currentUser": Secret.objects.GetCurrentUser(request.session['id'])
     }
 
-    print context['posts'].created_by.id
+    print context['posts'][0].created_by
     print context['currentUser'].id
 
     return render(request, 'secrets/popular.html', context)
